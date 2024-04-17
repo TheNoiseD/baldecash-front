@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://test-back.test/api/'
+const baseURL = 'http://localhost/api/'
 
 const getAuthorizationHeader = () => {
   const token = localStorage.getItem('token');

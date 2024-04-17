@@ -18,7 +18,7 @@ export default function App(userData) {
             try {
                 axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
                 axios.defaults.headers.common['Content-Type'] = 'application/json';
-                const response = await axios.get('https://test-back.test/api/user');
+                const response = await axios.get('http://localhost/api/user');
                 response.data.users.forEach((user) => {
                     // primera en mayusculas
                     user.role_name = user.role.name.charAt(0).toUpperCase() + user.role.name.slice(1);
